@@ -1,0 +1,518 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #FF4000; /* Color de fondo del header */
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 250px; /* Ajusta el tamaño del logo */
+    height: auto; /* Mantiene la proporción del logo */
+    display: block;
+}
+
+.search-bar input {
+    padding: 12px;
+    border-radius: 20px;
+    border: none;
+    width: 300px;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+.auth-links a {
+    color: #fff;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+/* Banner (Carrusel) Section */
+.banner {
+    position: relative;
+    text-align: center;
+    overflow: hidden; /* Oculta partes de las imágenes fuera del contenedor */
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Transición suave */
+}
+
+.slides img {
+    min-width: 100%; /* Cada imagen ocupa el 100% del ancho */
+    height: auto;
+    object-fit: cover;
+}
+
+/* Estilos del botón dentro del banner */
+.banner-button {
+    position: absolute;
+    bottom: 100px;
+    left: 30%;
+    transform: translateX(-50%);
+    background-color: #FF4000;
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.banner-button:hover {
+    background-color: #3a92a0; /* Cambia el color al pasar el ratón */
+}
+
+/* Main Section */
+main {
+    padding: 20px;
+    text-align: left;
+    background-color: #201E1F; /* Fondo oscuro */
+}
+.videos-content p {
+    color: white; /* Cambia el color del texto de los párrafos a blanco */
+}
+
+h2 {
+    color: white; /* Cambia el color del texto */
+    font-size: 32px; /* Aumenta el tamaño del texto, ajusta este valor según prefieras */
+    margin-bottom: 20px; /* Añade espacio debajo del h2, ajusta según el espacio que desees */
+    font-weight: bold; /* Opcional: para hacer el texto más grueso */
+}
+
+h3 {
+    color: black; /* Cambia el color del texto a negro */
+    margin-bottom: 20px; /* Añade un espacio debajo de los h3, ajusta este valor según prefieras */
+}
+
+/* Smooth scrolling behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Section .interaction-design */
+.interaction-design, .interaction-design-reverse {
+    background-color: #50b2c0;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.content-grid, .content-grid-reverse {
+    display: grid;
+    grid-gap: 20px;
+    text-align: left;
+}
+
+.content-grid {
+    grid-template-columns: 2fr 1fr;
+}
+
+.content-grid-reverse {
+    grid-template-columns: 1fr 2fr;
+}
+
+.topic-content, .image-placeholder, .video-placeholder {
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco con opacidad */
+    padding: 20px;
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+/* Estilos para imágenes */
+.image-placeholder img, .video-placeholder img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+.video-block {
+    background-color: #50b2c0; /* Color de fondo personalizado */
+    padding: 40px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    text-align: center; /* Centra el contenido dentro del bloque */
+    margin-top: 20px; /* Espacio superior */
+}
+
+.video-block iframe {
+    border: 5px solid white; /* Bordes blancos alrededor del video */
+    border-radius: 10px; /* Bordes redondeados para el video */
+}
+
+.video-block {
+    background-color: #50b2c0; /* Color de fondo personalizado */
+    padding: 40px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    text-align: center; /* Centra el contenido dentro del bloque */
+    margin-top: 20px; /* Espacio superior */
+}
+
+.video-block iframe {
+    border: 5px solid white; /* Bordes blancos alrededor del video */
+    border-radius: 10px; /* Bordes redondeados para el video */
+}
+.video-block {
+    background-color: #50b2c0; /* Color de fondo personalizado */
+    padding: 40px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    text-align: center; /* Centra el contenido dentro del bloque */
+    margin-top: 20px; /* Espacio superior */
+    display: grid; /* Usamos grid para organizar los videos */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Ajusta a diferentes tamaños de pantalla */
+    gap: 20px; /* Espacio entre videos */
+}
+
+.video-block iframe {
+    border: 5px solid white; /* Bordes blancos alrededor del video */
+    border-radius: 10px; /* Bordes redondeados para el video */
+    width: 100%; /* Ajusta el ancho del iframe */
+    height: auto; /* Mantiene la proporción */
+}
+
+/* Estilos para el grid que contendrá los videos adicionales */
+.video-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos videos por fila */
+    gap: 20px; /* Espacio entre los videos */
+    margin-top: 40px; /* Espacio superior al bloque de videos */
+}
+
+.video-grid iframe {
+    width: 100%; /* Los videos ocuparán el 100% del ancho del contenedor */
+    height: auto;
+    border: 5px solid white; /* Bordes blancos */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+/* Botón en la sección de videos */
+button {
+    padding: 15px 30px;
+    background-color: #50b2c0;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #3a92a0;
+}
+.videos-section {
+    background-color: #50b2c0; /* Color de fondo personalizado */
+    padding: 20px; /* Espaciado interno para crear un bloque visual */
+    border-radius: 10px; /* Bordes redondeados */
+    text-align: center; /* Centra el texto y el botón */
+    margin-top: 40px; /* Añade un espacio encima del bloque */
+}
+
+.videos-section h3 {
+    color: white; /* Cambia el color del texto del h3 a blanco */
+    margin-bottom: 20px; /* Espacio debajo del h3 */
+}
+
+.videos-section button {
+    background-color: white; /* Botón con color de fondo blanco */
+    color: #50b2c0; /* Texto del botón con el color de fondo de la sección */
+    font-size: 18px;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.videos-section button:hover {
+    background-color: #3a92a0; /* Un color más oscuro al hacer hover */
+    color: white; /* Cambia el color del texto al pasar el ratón */
+}
+.videos-section a {
+    margin-right: 10px; /* Añade un espacio entre los botones */
+}
+
+.videos-section button {
+    margin-top: 10px; /* Opcional: añade un espacio superior a cada botón */
+}
+
+/* Related Topics Section */
+.related-topics {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    margin-top: 40px;
+}
+
+.topic {
+    background-color: #FAAA8D;
+    padding: 20px;
+    width: 22%;
+    text-align: left;
+}
+
+.topic img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer ul {
+    list-style-type: none;
+    padding-top: 10px;
+}
+
+footer ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+footer ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer p {
+    color: #fff;
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+}
+.related-topics {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    margin-top: 40px; /* Espacio superior */
+}
+
+.topic {
+    background-color: #FAAA8D; /* Color de fondo para cada tema */
+    padding: 20px;
+    width: 22%; /* Ajusta el ancho de cada tema */
+    text-align: left;
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+.topic img {
+    width: 100%; /* Imagen ocupa todo el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 10px; /* Bordes redondeados para la imagen */
+    margin-top: 10px; /* Espacio entre el título y la imagen */
+}
+
+.related-topics h3 {
+    color: black; /* Color de texto */
+    margin-bottom: 10px; /* Espacio debajo de los títulos */
+}
+.videos-content {
+    min-height: 100vh; /* Ocupa al menos el 100% de la altura de la pantalla */
+    display: flex; /* Usa flexbox para centrar los videos verticalmente */
+    flex-direction: column; /* Asegura que el contenido esté en columna */
+    justify-content: center; /* Centra el contenido verticalmente */
+    align-items: center; /* Centra el contenido horizontalmente */
+    padding: 40px 20px; /* Añade espacio alrededor del contenido */
+    background-color: #000; /* Fondo negro */
+    text-align: center; /* Centra el texto */
+    color: #fff; /* Color blanco para el texto */
+}
+
+.video-block {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Acomoda los videos en columnas */
+    gap: 20px; /* Espacio entre videos */
+    padding: 40px; /* Espaciado interno del bloque de color */
+    background-color: #000; /* Fondo negro para mantener consistencia */
+    border-radius: 10px; /* Bordes redondeados */
+    width: 100%; /* Ocupa el ancho completo */
+    max-width: 1200px; /* Limita el ancho máximo para pantallas grandes */
+}
+
+.video-block iframe {
+    width: 100%; /* Los videos ocupan el 100% del espacio disponible */
+    height: auto;
+    border: 5px solid white; /* Bordes blancos alrededor del video */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+.videos-content h2, .videos-content p {
+    color: #fff; /* Asegura que el texto del encabezado y párrafo sea blanco */
+}
+
+/* Estilo para la sección de Recursos con fondo negro */
+.resources-content {
+    min-height: 100vh; /* Ocupa al menos el 100% de la altura de la pantalla */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    background-color: #000; /* Fondo negro */
+    text-align: center;
+    color: #fff; /* Color blanco para el texto */
+}
+
+.resource-block {
+    padding: 40px; /* Espaciado interno */
+    background-color: #000; /* Fondo negro para mantener consistencia */
+    border-radius: 10px; /* Bordes redondeados */
+    width: 100%;
+    max-width: 1200px;
+    text-align: left; /* Texto alineado a la izquierda */
+}
+
+.resource-block ul li {
+    list-style-type: none;
+    margin-bottom: 10px;
+}
+
+.resource-block a {
+    color: #50b2c0; /* Color de los enlaces */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+}
+
+.resource-block a:hover {
+    text-decoration: underline; /* Subraya el enlace al pasar el mouse */
+}
+
+/* Sección de temas relacionados (topics) */
+.related-topics {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    margin-top: 40px;
+}
+
+.topic {
+    background-color: #FAAA8D;
+    padding: 20px;
+    width: 22%;
+    text-align: left;
+    border-radius: 10px;
+}
+
+.topic img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.related-topics h3 {
+    color: black;
+    margin-bottom: 10px;
+}
+
+.video-block {
+    background-color: #50b2c0; /* Color de fondo */
+    padding: 40px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    text-align: center; /* Centra el contenido */
+    margin-top: 20px; /* Espacio superior */
+    
+    display: flex;
+    flex-direction: column; /* Hace que los videos se apilen en columna */
+    align-items: center; /* Centra los videos horizontalmente */
+    gap: 20px; /* Espacio entre los videos */
+}
+
+.video-block iframe {
+    width: 100%; /* Ajusta el ancho del iframe */
+    max-width: 560px; /* Limita el ancho máximo para que no se expanda demasiado */
+    height: 315px; /* Mantiene la altura del video */
+    border: 5px solid white; /* Bordes blancos alrededor del video */
+    border-radius: 10px; /* Bordes redondeados para el video */
+}
+
+.back-button {
+    display: inline-block;
+    margin-top: 20px; /* Espacio por encima del botón */
+    padding: 12px 30px; /* Espaciado interno del botón */
+    background-color: #FF4000; /* Color de fondo del botón */
+    color: #fff; /* Color del texto */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    font-size: 18px; /* Tamaño del texto */
+    border-radius: 8px; /* Bordes redondeados */
+    width: auto; /* Ajusta el ancho al contenido */
+    text-align: center; /* Centra el texto */
+    transition: background-color 0.3s ease; /* Transición suave para hover */
+}
+
+.back-button:hover {
+    background-color: #3a92a0; /* Cambia el color al pasar el ratón */
+}
+.resources-content {
+    min-height: 100vh; /* Ocupa al menos el 100% de la altura de la pantalla */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    background-image: url('images/diseñoux.jpg'); /* Ruta de la imagen */
+    background-size: cover; /* Asegura que la imagen cubra toda la sección */
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.resources-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Capa semitransparente */
+    z-index: 1;
+}
+
+.resource-block {
+    position: relative;
+    z-index: 2; /* Asegura que el contenido esté por encima del fondo */
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco con 80% de opacidad */
+    border-radius: 10px;
+    width: 100%;
+    max-width: 1200px;
+    text-align: left;
+}
+
+.resources-content h2 {
+    color: white; /* Cambia el color del texto a blanco */
+    margin-bottom: 20px; /* Añade un espacio debajo del h2 */
+    font-size: 32px; /* Tamaño del texto ajustable */
+}
+
+.resources-content p {
+    color: white; /* Cambia el color del texto a blanco */
+    margin-bottom: 20px; /* Añade un espacio debajo del párrafo */
+    font-size: 18px; /* Tamaño del texto ajustable */
+    line-height: 1.6; /* Mejora la legibilidad añadiendo altura de línea */
+}
+
